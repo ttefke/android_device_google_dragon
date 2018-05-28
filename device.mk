@@ -73,6 +73,9 @@ PRODUCT_PACKAGES += \
     CrashReportProvider \
     fwtool
 
+PRODUCT_COPY_FILES += \
+    device/google/dragon/dragon-keypad.kl:system/usr/keylayout/dragon-keypad.kl
+
 ifeq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_PACKAGES += \
     tinyplay \

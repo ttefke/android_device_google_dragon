@@ -298,10 +298,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     DragonParts
 
-# Vibrator HAL
-PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-impl
-
 # Allows healthd to boot directly from charger mode rather than initiating a reboot.
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.enable_boot_charger_mode=1

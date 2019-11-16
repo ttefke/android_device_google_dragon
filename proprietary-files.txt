@@ -106,6 +106,10 @@ vendor/lib64/libnvrm_graphics.so
 vendor/lib64/libnvrmapi_tegra.so
 vendor/lib64/libphs.so
 
+# hwcomposer (built in mokee/mkq with external/drm_hwcomposer at mokee/mkp)
+vendor/lib/hw/hwcomposer.drm.so|52872f5deb664fff2120def4a5fd926f176fb53d
+vendor/lib64/hw/hwcomposer.drm.so|61797b300b3da0f839cad24ed198431a51f09758
+
 # Media
 vendor/lib/libnvme_msenc.so
 vendor/lib/libnvmm_asfparser.so

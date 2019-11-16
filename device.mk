@@ -332,9 +332,11 @@ $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/config/config-bc
 ENABLE_LIBDRM := true
 BOARD_GPU_DRIVERS := tegra
 USE_XML_AUDIO_POLICY_CONF := 1
+
+# No hwcomposer.drm until we upgrade our kernel to match the requirements
+# of the module in Android Q tree. Prebuilt blobs are shipped instead.
 PRODUCT_PACKAGES += \
     f54test \
-    hwcomposer.drm \
     libdrm \
     rmi4update \
     rmihidtool

@@ -27,7 +27,7 @@ vendor/lib/libnvvicsi_v3.so
 vendor/lib/libnvwinsys.so
 vendor/lib/libnvwsi.so
 vendor/lib/libopencv24_tegra.so
-vendor/lib/libscf.so
+vendor/lib/libscf.so|7d5da605f34fdcc70154a7991fb373439c643614
 vendor/lib/libtbb.so
 vendor/lib64/libnvavp.so
 vendor/lib64/libnvblit.so

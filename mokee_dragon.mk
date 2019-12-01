@@ -33,3 +33,6 @@ PRODUCT_DEVICE := dragon
 PRODUCT_BRAND := Google
 PRODUCT_MODEL := Pixel C
 PRODUCT_MANUFACTURER := Google
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.mk.maintainer=updateing

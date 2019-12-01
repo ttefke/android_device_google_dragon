@@ -54,17 +54,15 @@ if [ -f proprietary-files-ramdisk.txt ]; then
     export PRODUCTMK=${PRODUCTMK/%.mk/-ramdisk.mk}
 
     # Copyright headers but not guards
-    write_header "$PRODUCTMK"
+    write_makefile_header "$PRODUCTMK"
 
     # General copy routine
     parse_file_list proprietary-files-ramdisk.txt
 
-    # Require using "system/vendor" instead of $(TARGET_COPY_OUT_VENDOR),
-    # make the following sed easier
-    write_product_copy_files FALSE
+    write_product_copy_files
 
     # The key: replace system/ in target with ramdisk/
-    sed -i 's|:system|:ramdisk|g' "$PRODUCTMK"
+    sed -i 's|:..TARGET_COPY_OUT_VENDOR.|:ramdisk/vendor|g' "$PRODUCTMK"
 
     # Include ramdisk file list
     printf "\n\$(call inherit-product,vendor/$VENDOR/$DEVICE/$(basename $PRODUCTMK))" >> $SAVED_PRODUCTMK

@@ -56,6 +56,9 @@ PRODUCT_COPY_FILES := \
     $(LOCAL_PATH)/bcmdhd.cal:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bcmdhd.cal \
     $(LOCAL_PATH)/com.nvidia.nvsi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nvidia.nvsi.xml
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_FSTAB):$(TARGET_COPY_OUT_RAMDISK)/fstab.dragon
+
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     libwpa_client \

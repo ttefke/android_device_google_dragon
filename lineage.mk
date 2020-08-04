@@ -38,4 +38,7 @@ BUILD_FINGERPRINT := google/ryu/dragon:8.1.0/OPM8.190605.005/5749003:user/releas
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.recents.grid=true
 
+# Disable bootanimation
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.nobootanimation=1
 

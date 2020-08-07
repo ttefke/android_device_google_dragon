@@ -26,13 +26,10 @@ $(call inherit-product, device/google/dragon/product.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
 # Inherit some common MK stuff.
-$(call inherit-product, vendor/mokee/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
 
-PRODUCT_NAME := mokee_dragon
+PRODUCT_NAME := lineage_dragon
 PRODUCT_DEVICE := dragon
 PRODUCT_BRAND := Google
 PRODUCT_MODEL := Pixel C
 PRODUCT_MANUFACTURER := Google
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.mk.maintainer=updateing

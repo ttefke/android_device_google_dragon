@@ -15,6 +15,6 @@
 #
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/mokee_dragon.mk
+	$(LOCAL_DIR)/lineage_dragon.mk
 
-COMMON_LUNCH_CHOICES := mokee_dragon-eng mokee_dragon-userdebug
+COMMON_LUNCH_CHOICES := lineage_dragon-eng lineage_dragon-userdebug

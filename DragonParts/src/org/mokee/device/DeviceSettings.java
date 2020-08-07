@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.mokee.device;
+package org.lineage.device;
 
 import android.app.Activity;
 import android.content.Context;

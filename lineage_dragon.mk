@@ -39,3 +39,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="ryu-user 8.1.0 OPM8.190605.005 5749003 release-keys"
 
 BUILD_FINGERPRINT := google/ryu/dragon:8.1.0/OPM8.190605.005/5749003:user/release-keys
+
+# Vendor security patch level
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.lineage.build.vendor_security_patch=2019-06-05

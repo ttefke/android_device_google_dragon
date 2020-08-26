@@ -248,7 +248,7 @@ service tlk_daemon /vendor/bin/tlk_daemon --storagedir /data/ss --rpmbdev /dev/b
     class main
     group system
 
-on property:debug.bq25892=dump
+on property:vendor.debug.bq25892=dump
     exec - root root system -- /vendor/bin/dump_bq25892.sh
 
 on property:apexd.status=ready

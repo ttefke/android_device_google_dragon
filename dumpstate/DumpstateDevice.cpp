@@ -47,14 +47,14 @@ Return<void> DumpstateDevice::dumpstateBoard(const hidl_handle& handle) {
     }
 
     /* ask init.dragon.rc to dump the charging state and wait */
-    property_set("debug.bq25892", "dump");
+    property_set("vendor.debug.bq25892", "dump");
     sleep(1);
 
     DumpFileToFd(fd, "EC Version", "/sys/class/chromeos/cros_ec/version");
     RunCommandToFd(fd, "FW Version", {"fwtool", "vboot"}, CommandOptions::WithTimeout(5).Build());
 
     DumpFileToFd(fd, "INTERRUPTS", "/proc/interrupts");
-    // This is the file created by setting debug.bq25892.
+    // This is the file created by setting vendor.debug.bq25892.
     DumpFileToFd(fd, "Charger chip registers", "/data/vendor/fw_logs/bq25892.txt");
 
     DumpFileToFd(fd, "Battery gas gauge", "/sys/class/power_supply/bq27742-0/uevent");

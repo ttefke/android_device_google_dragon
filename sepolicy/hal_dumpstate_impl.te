@@ -4,9 +4,9 @@ hal_server_domain(hal_dumpstate_impl, hal_dumpstate)
 type hal_dumpstate_impl_exec, exec_type, file_type, vendor_file_type;
 init_daemon_domain(hal_dumpstate_impl)
 
-# hal_dumstate_impl sets the debug.bq25892 property
+# hal_dumstate_impl sets the vendor.debug.bq25892 property
 # to trigger the charger chip register dump as root by init
-set_prop(hal_dumpstate_impl, debug_bq25892_prop)
+set_prop(hal_dumpstate_impl, vendor_debug_bq25892_prop)
 
 # allow hal_dumstate_impl to execute fwtool in its own domain
 allow hal_dumpstate_impl fwtool_exec:file rx_file_perms;

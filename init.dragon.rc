@@ -39,7 +39,7 @@ on early-boot
     verity_update_state
 
 # Set watchdog timer to 30 seconds and pet it every 10 seconds to get a 20 second margin
-service watchdogd /sbin/watchdogd 10 20
+service watchdogd /system/bin/watchdogd 10 20
     class core
     seclabel u:r:watchdogd:s0
 
@@ -243,24 +243,6 @@ service fwtool /vendor/bin/fwtool mark_boot success
     class late_start
     user root
     oneshot
-
-service kickstart /vendor/bin/qcks -i /vendor/firmware/mdm/image/ -r /data/qcks/mdm/
-    class late_start
-    disabled
-    user system
-    group system
-    oneshot
-
-service qmuxd /vendor/bin/qmuxd
-    class late_start
-    disabled
-    user system
-    group system radio
-
-service netmgrd /vendor/bin/netmgrd
-    class late_start
-    disabled
-    group system radio
 
 service tlk_daemon /vendor/bin/tlk_daemon --storagedir /data/ss --rpmbdev /dev/block/mmcblk0rpmb
     class main

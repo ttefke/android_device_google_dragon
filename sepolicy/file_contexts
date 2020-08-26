@@ -75,3 +75,12 @@
 
 #sysfs nodes for cpuinfo for CTS
 /sys/firmware/devicetree/base/cpus(/.*)?        u:object_r:sysfs_socinfo:s0
+
+#memtrack
+/sys/kernel/debug/ion/clients/pids(/.*)?        u:object_r:sysfs_pids:s0
+
+# init regions
+/sys/firmware/vpd/ro/region(/.*)?               u:object_r:sysfs_region:s0
+
+# firmware base
+/sys/firmware/devicetree/base/firmware/chromeos(/.*)?     u:object_r:sysfs_chromeos:s0

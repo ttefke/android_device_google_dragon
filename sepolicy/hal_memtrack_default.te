@@ -1,0 +1,3 @@
+type sysfs_pids, fs_type, debugfs_type;
+
+allow hal_memtrack_default sysfs_pids:dir { open read search };

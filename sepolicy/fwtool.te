@@ -1,17 +1,9 @@
 # permissions for /vendor/bin/fwtool
 type fwtool, domain;
 type fwtool_exec, exec_type, file_type, vendor_file_type;
-type sysfs_chromeos, fs_type, sysfs_type;
 
 init_daemon_domain(fwtool)
 
 # access /dev/mtd/*
 allow fwtool mtd_device:dir search;
 allow fwtool mtd_device:chr_file rw_file_perms;
-
-allow fwtool vendor_file:dir { read };
-allow fwtool sysfs_chromeos:chr_file { open read write ioctl };
-allow fwtool sysfs_chromeos:file { read open getattr };
-allow fwtool sysfs_chromeos:dir { search };
-
-allow fwtool device:chr_file { ioctl };

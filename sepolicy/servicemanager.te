@@ -1,6 +1,0 @@
-allow servicemanager hal_graphics_allocator_default:dir search;
-allow servicemanager hal_graphics_allocator_default:file { open read };
-allow servicemanager hal_graphics_allocator_default:process getattr;
-allow servicemanager mediaswcodec:dir search;
-allow servicemanager mediaswcodec:file { open read };
-allow servicemanager mediaswcodec:process getattr;

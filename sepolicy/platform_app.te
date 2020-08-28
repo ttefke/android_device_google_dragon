@@ -1,1 +1,0 @@
-allow platform_app sysfs_pids:dir { search };

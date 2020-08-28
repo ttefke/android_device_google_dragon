@@ -2,7 +2,6 @@
 # ro.product.locale property
 type locale, domain;
 type locale_exec, exec_type, file_type, vendor_file_type;
-type sysfs_region, fs_type, sysfs_type;
 
 init_daemon_domain(locale)
 
@@ -11,9 +10,6 @@ set_prop(locale, wifi_region_prop)
 
 # use cat to read /sys/firmware/vpd/ro/region
 allow locale vendor_shell_exec:file rx_file_perms;
-allow locale sysfs_region:dir {read getattr };
-allow locale sysfs_region:file { getattr };
 
 # execute toolbox/toybox
 allow locale vendor_toolbox_exec:file rx_file_perms;
-allow locale vendor_file:dir { read };

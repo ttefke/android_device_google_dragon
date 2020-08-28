@@ -1,5 +1,6 @@
 cc_binary {
-    name: "rmi4update",
+    name: "rmi4update.dragon",
+    proprietary: true,
     srcs: [
         "main.cpp",
         "rmi4update.cpp",

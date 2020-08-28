@@ -345,7 +345,7 @@ PRODUCT_PACKAGES += \
     f54test \
     hwcomposer.dragon \
     libdrm \
-    rmi4update \
+    rmi4update.dragon \
     rmihidtool
 
 # Vendor seccomp policy files for media components:

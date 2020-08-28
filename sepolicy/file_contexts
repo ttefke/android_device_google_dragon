@@ -30,8 +30,8 @@
 # sysfs files used by wifi
 /sys/module/bcmdhd/parameters/firmware_path     u:object_r:sysfs_wlan_fwpath:s0
 
-# system executables
-/vendor/bin/rmi4update                          u:object_r:rmi4update_exec:s0
+# vendor executables
+/vendor/bin/rmi4update.dragon                   u:object_r:rmi4update_exec:s0
 
 # vendor executables
 /vendor/bin/dump_bq25892\.sh                    u:object_r:dump_bq25892_exec:s0

@@ -1,2 +1,2 @@
 allow mediaswcodec sysfs_pids:dir { search };
-binder_call(mediaswcodec, servicemanager);
+allow mediaswcodec servicemanager:binder { call };

@@ -125,6 +125,7 @@ ART_USE_HSPACE_COMPACT=true
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
 BOARD_SEPOLICY_DIRS += device/google/dragon/sepolicy
+SELINUX_IGNORE_NEVERALLOWS := true
 
 # add firmware update to the updater binary
 TARGET_RECOVERY_UPDATER_LIBS += librecovery_updater_dragon

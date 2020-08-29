@@ -21,3 +21,5 @@ allow cameraserver {
     -vendor_overlay_file
 }:dir r_dir_perms;
 allow cameraserver tmpfs:dir search;
+
+binder_call(cameraserver, init)

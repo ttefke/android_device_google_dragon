@@ -1,0 +1,2 @@
+binder_call(hal_graphics_allocator_default, ashmemd)
+binder_use(hal_graphics_allocator_default)

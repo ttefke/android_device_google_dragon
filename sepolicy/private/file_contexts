@@ -1,0 +1,2 @@
+/dev/stune(/.*)?                           u:object_r:foreground_device_priv:s0
+/sys/devices/700b0600.sdhci/mmc_host/mmc1/mmc1:0001/block/mmcblk0(/.*)?     u:object_r:sysfs_block:s0

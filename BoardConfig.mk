@@ -124,7 +124,8 @@ ART_USE_HSPACE_COMPACT=true
 # let charger mode enter suspend
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
-BOARD_SEPOLICY_DIRS += device/google/dragon/sepolicy
+BOARD_SEPOLICY_DIRS += device/google/dragon/sepolicy/vendor
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/google/dragon/sepolicy/private
 SELINUX_IGNORE_NEVERALLOWS := true
 
 # add firmware update to the updater binary

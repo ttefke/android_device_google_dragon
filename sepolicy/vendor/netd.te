@@ -1,0 +1,2 @@
+dontaudit netd self:capability sys_module;
+allow netd foreground_device:file rw_file_perms;

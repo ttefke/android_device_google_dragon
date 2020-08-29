@@ -16,3 +16,4 @@ allow touch_fw_update touch_fw_update_log_file:dir w_dir_perms;
 # Execute rmi4update
 domain_auto_trans(touch_fw_update, rmi4update_exec, rmi4update)
 allow touch_fw_update rmi4update_exec:file rx_file_perms;
+allow touch_fw_update vendor_file:dir r_dir_perms;

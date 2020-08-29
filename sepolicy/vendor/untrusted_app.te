@@ -1,0 +1,2 @@
+allow appdomain sysfs_cpu:file r_file_perms;
+ 

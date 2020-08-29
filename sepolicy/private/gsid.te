@@ -1,0 +1,1 @@
+allow gsid foreground_device_priv:file rw_file_perms;

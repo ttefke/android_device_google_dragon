@@ -1,0 +1,32 @@
+type sysfs_camera, fs_type, sysfs_type;
+
+allow init tmpfs:lnk_file create_file_perms;
+# set attributes on /sys/class/gpio sym link
+# chmod 0770 /sys/class/gpio/gpio66
+allow init sysfs:lnk_file setattr;
+
+# userspace cannot create files in sys. ignore denial
+dontaudit init sysfs_devices_system_cpu:dir write;
+
+allow init { cache_file storage_file }:dir mounton;
+
+# /config
+allow init configfs:{ file lnk_file } create_file_perms;
+
+# allow host1x devices
+allow init host1x_device:chr_file ioctl;
+
+allow init ion_device:chr_file rw_file_perms;
+allow init sensorservice_service:service_manager find;
+
+allow init sysfs_camera:file rw_file_perms;
+allow init foreground_device:file rw_file_perms;
+allow init gpu_device:chr_file r_file_perms;
+
+allow init permission_service:service_manager find;
+allow init power_service:service_manager find;
+allow init hal_graphics_mapper_hwservice:hwservice_manager find;
+allow init camera_device:chr_file rw_file_perms;
+allow init sysfs_cpu:file r_file_perms;
+
+binder_call(init, system_server)

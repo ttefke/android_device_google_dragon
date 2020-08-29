@@ -1,0 +1,1 @@
+allow zygote foreground_device_priv:file rw_file_perms;

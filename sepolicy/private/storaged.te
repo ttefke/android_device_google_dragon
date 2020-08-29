@@ -1,0 +1,4 @@
+type sysfs_block, fs_type, sysfs_type;
+allow storaged sysfs_block:file rw_file_perms;
+allow storaged sysfs_block:dir r_dir_perms;
+allow storaged foreground_device_priv:file rw_file_perms;

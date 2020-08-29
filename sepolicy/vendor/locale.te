@@ -2,6 +2,7 @@
 # ro.product.locale property
 type locale, domain;
 type locale_exec, exec_type, file_type, vendor_file_type;
+type sysfs_locale, fs_type, sysfs_type;
 
 init_daemon_domain(locale)
 
@@ -13,3 +14,7 @@ allow locale vendor_shell_exec:file rx_file_perms;
 
 # execute toolbox/toybox
 allow locale vendor_toolbox_exec:file rx_file_perms;
+
+allow locale sysfs_locale:file r_file_perms;
+allow locale sysfs_locale:dir r_dir_perms;
+allow locale vendor_file:dir r_dir_perms;

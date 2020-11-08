@@ -13,5 +13,5 @@ cc_binary {
         "-Werror",
         "-Wno-unused-parameter",
     ],
-    static_libs: ["rmidevice"],
+    static_libs: ["rmidevice.dragon"],
 }

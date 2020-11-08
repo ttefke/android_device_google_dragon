@@ -1,5 +1,7 @@
 cc_library_static {
-    name: "rmidevice",
+    name: "rmidevice.dragon",
+    overrides: ["rmidevice"],
+    vendor: true,
     srcs: [
         "rmifunction.cpp",
         "rmidevice.cpp",

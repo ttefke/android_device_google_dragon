@@ -1,5 +1,5 @@
 //
-// Static library for board custom healthd extension
+// Library for board custom healthd extension
 //
 
 cc_library_static {
@@ -12,4 +12,16 @@ cc_library_static {
     header_libs: ["libhealthd_headers"],
 
     vendor_available: true
+}
+
+cc_library_shared {
+    name: "android.hardware.health@1.0-impl-dragon",
+    vendor: true,
+    relative_install_path: "hw",
+
+    static_libs: [
+        "android.hardware.health@1.0-impl-helper",
+        "android.hardware.health@1.0-convert",
+        "libhealthd.dragon",
+    ],
 }

@@ -17,4 +17,7 @@
 PRODUCT_MAKEFILES := \
 	$(LOCAL_DIR)/lineage_dragon.mk
 
-COMMON_LUNCH_CHOICES := lineage_dragon-eng lineage_dragon-userdebug
+COMMON_LUNCH_CHOICES := \
+	lineage_dragon-user  \
+	lineage_dragon-userdebug \
+	lineage_dragon-eng

@@ -36,6 +36,14 @@
 // squash a frame that the hw can't display with hw overlays.
 #define DRM_DISPLAY_BUFFERS 3
 
+/* rotation property bits */
+#define DRM_ROTATE_0   0
+#define DRM_ROTATE_90  1
+#define DRM_ROTATE_180 2
+#define DRM_ROTATE_270 3
+#define DRM_REFLECT_X  4
+#define DRM_REFLECT_Y  5
+
 namespace android {
 
 class GLWorkerCompositor;

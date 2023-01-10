@@ -22,17 +22,22 @@
 #
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, device/google/dragon/product.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
-# Inherit some common MK stuff.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
+
+# Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
 
-PRODUCT_NAME := lineage_dragon
-PRODUCT_DEVICE := dragon
+# Inherit from dragon device
+$(call inherit-product, $(LOCAL_PATH)/device.mk)
+
 PRODUCT_BRAND := Google
-PRODUCT_MODEL := Pixel C
+PRODUCT_DEVICE := dragon
 PRODUCT_MANUFACTURER := Google
+PRODUCT_MODEL := Pixel C
+PRODUCT_NAME := lineage_dragon
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=dragon \

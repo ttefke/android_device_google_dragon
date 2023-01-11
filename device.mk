@@ -309,8 +309,8 @@ PRODUCT_PACKAGES += \
     DragonKeyboard
 
 # Wi-Fi country code setting
-PRODUCT_PACKAGES += \
-    DragonParts
+#PRODUCT_PACKAGES += \
+#    DragonParts
 
 # Allows healthd to boot directly from charger mode rather than initiating a reboot.
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \

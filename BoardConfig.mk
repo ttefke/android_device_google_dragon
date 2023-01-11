@@ -128,6 +128,7 @@ BOARD_SEPOLICY_DIRS += device/google/dragon/sepolicy/vendor
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/google/dragon/sepolicy/private
 SELINUX_IGNORE_NEVERALLOWS := true
 
+TARGET_RECOVERY_FSTAB := device/google/dragon/recovery.fstab
 # add firmware update to the updater binary
 TARGET_RECOVERY_UPDATER_LIBS += librecovery_updater_dragon
 TARGET_RECOVERY_UPDATER_EXTRA_LIBS +=
